@@ -38,6 +38,10 @@ bot.on('message', async (ctx) => {
 break;      
 } else {
   console.log("long")
+  if (pee.test(url)){
+    console.log("shopee")
+   break;
+  }
   if (laz.test(url)){
     const linkLaz = await `https://c.lazada.vn/t/c.06wSoi?url=${encodeURIComponent(url)}&sub_aff_id=shorTool`
    await fetch(`https://s.slamee.top/yourls-api.php?signature=0b172c9ad7&format=simple&action=shorturl&url=${encodeURIComponent(linkLaz)}`).then(res => res.text()).then(async(data)  => {console.log(data); await ctx.reply(data, {parse_mode: "HTML"})})
