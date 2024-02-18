@@ -1,7 +1,7 @@
-const { Bot, webhookCallback } = require("grammy");
-const fetch = require("node-fetch");
-const express = require("express");
-require("dotenv").config();
+import express from "express";
+import { Bot,webhookCallback } from "grammy";
+import fetch from "node-fetch"
+import {} from 'dotenv/config'
 const bot = new Bot(process.env.BOT_TOKEN);
 
 
