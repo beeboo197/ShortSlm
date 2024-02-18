@@ -29,10 +29,10 @@ bot.on('message', async (ctx) => {
       .replace(/%3Fdsource/,''))
       if (aff.test(longUrl)) {  
         const productLink = await `https://c.lazada.vn/t/c.06wSoi?url=${encodeURIComponent(longUrl.match(/share&url=(.*?)\html/)[1] + 'html')}&sub_aff_id=shorTool`
-  fetch(`https://s.slamee.top/yourls-api.php?signature=0b172c9ad7&format=simple&action=shorturl&url=${encodeURIComponent(productLink)}`).then(res => res.text()).then(data => {console.log(data); ctx.reply(data, {parse_mode: "HTML"})})
+ await fetch(`https://s.slamee.top/yourls-api.php?signature=0b172c9ad7&format=simple&action=shorturl&url=${encodeURIComponent(productLink)}`).then(res => res.text()).then(data => {console.log(data); ctx.reply(data, {parse_mode: "HTML"})})
 }  else {
   const shopLink = await `https://c.lazada.vn/t/c.06wSoi?url=${encodeURIComponent(longUrl.split("?")[0]+'?path=index.htm')}&sub_aff_id=shorTool`
-  fetch(`https://s.slamee.top/yourls-api.php?signature=0b172c9ad7&format=simple&action=shorturl&url=${encodeURIComponent(shopLink)}`).then(res => res.text()).then(data => {console.log(data); ctx.reply(data, {parse_mode: "HTML"})})
+ await fetch(`https://s.slamee.top/yourls-api.php?signature=0b172c9ad7&format=simple&action=shorturl&url=${encodeURIComponent(shopLink)}`).then(res => res.text()).then(data => {console.log(data); ctx.reply(data, {parse_mode: "HTML"})})
 }
 });
 break;      
@@ -40,7 +40,7 @@ break;
   console.log("long")
   if (laz.test(url)){
     const linkLaz = await `https://c.lazada.vn/t/c.06wSoi?url=${encodeURIComponent(url)}&sub_aff_id=shorTool`
-    fetch(`https://s.slamee.top/yourls-api.php?signature=0b172c9ad7&format=simple&action=shorturl&url=${encodeURIComponent(linkLaz)}`).then(res => res.text()).then(data => {console.log(data); ctx.reply(data, {parse_mode: "HTML"})})
+   await fetch(`https://s.slamee.top/yourls-api.php?signature=0b172c9ad7&format=simple&action=shorturl&url=${encodeURIComponent(linkLaz)}`).then(res => res.text()).then(data => {console.log(data); ctx.reply(data, {parse_mode: "HTML"})})
 break;
   }
 }
@@ -49,7 +49,7 @@ break;
   console.log(message)
   const voucherCode = await `https://c.lazada.vn/t/c.06wSoi?url=${encodeURIComponent(`https://www.lazada.vn/catalog/?q=${message}`)}&sub_aff_id=shorTool`
   console.log(voucherCode)
-  fetch(`https://s.slamee.top/yourls-api.php?signature=0b172c9ad7&format=simple&action=shorturl&url=${encodeURIComponent(voucherCode)}`).then(res => res.text()).then(data => {console.log(data); ctx.reply(data, {parse_mode: "HTML"})})
+ await fetch(`https://s.slamee.top/yourls-api.php?signature=0b172c9ad7&format=simple&action=shorturl&url=${encodeURIComponent(voucherCode)}`).then(res => res.text()).then(data => {console.log(data); ctx.reply(data, {parse_mode: "HTML"})})
 break;
 } 
 } catch {
