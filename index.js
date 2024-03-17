@@ -22,8 +22,9 @@ bot.on('message', async (ctx) => {
     
     if (url.includes(lzd)){ 
       console.log("short") 
-    await fetch(url).then(res => res.text()).then(async(data) => {
       break;
+    await fetch(url).then(res => res.text()).then(async(data) => {
+      
       const longUrl = await decodeURIComponent(data.match(/URL\('(.*?)dsource/g)
       .toString()
       .replace(/URL\('/g, '')
