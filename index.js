@@ -53,7 +53,7 @@ break;
    
 } else {
   console.log(message)
-  const voucherCode = await `https://c.lazada.vn/t/c.06wSoi?intent=false&fallback=true&url=${encodeURIComponent(`https://www.lazada.vn/catalog/?q=${message}`)}&sub_aff_id=shorTool`
+  const voucherCode = await `https://c.lazada.vn/t/c.06wSoi?intent=true&fallback=true&url=${encodeURIComponent(`https://www.lazada.vn/catalog/?q=${message}`)}&sub_aff_id=shorTool`
   console.log(voucherCode)
  await fetch(`https://s.slamee.top/yourls-api.php?signature=0b172c9ad7&format=simple&action=shorturl&url=${encodeURIComponent(voucherCode)}`).then(res => res.text()).then(async(data)  => {console.log(data); await ctx.reply(data, {parse_mode: "HTML"})})
 break;
