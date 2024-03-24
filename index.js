@@ -30,10 +30,10 @@ bot.on('message', async (ctx) => {
       .replace(/URL\('/g, '')
       .replace(/%3Fdsource/,''))
       if (aff.test(longUrl)) {  
-        const productLink = await `https://c.lazada.vn/t/c.06wSoi?intent=false&fallback=true&url=${encodeURIComponent(longUrl.match(/share&url=(.*?)\html/)[1] + 'html')}&sub_aff_id=shorTool`
+        const productLink = await `https://c.lazada.vn/t/c.06wSoi?intent=true&fallback=true&url=${encodeURIComponent(longUrl.match(/share&url=(.*?)\html/)[1] + 'html')}&sub_aff_id=shorTool`
  await fetch(`https://s.slamee.top/yourls-api.php?signature=0b172c9ad7&format=simple&action=shorturl&url=${encodeURIComponent(productLink)}`).then(res => res.text()).then(async(data)  => {console.log(data); await ctx.reply(data, {parse_mode: "HTML"})})
 }  else {
-  const shopLink = await `https://c.lazada.vn/t/c.06wSoi?intent=false&fallback=true&url=${encodeURIComponent(longUrl.split("?")[0]+'?path=index.htm')}&sub_aff_id=shorTool`
+  const shopLink = await `https://c.lazada.vn/t/c.06wSoi?intent=true&fallback=true&url=${encodeURIComponent(longUrl.split("?")[0]+'?path=index.htm')}&sub_aff_id=shorTool`
  await fetch(`https://s.slamee.top/yourls-api.php?signature=0b172c9ad7&format=simple&action=shorturl&url=${encodeURIComponent(shopLink)}`).then(res => res.text()).then(async(data)  => {console.log(data); await ctx.reply(data, {parse_mode: "HTML"})})
 }
 });
@@ -45,7 +45,7 @@ break;
    break;
   }
   if (laz.test(url)){
-    const linkLaz = await `https://c.lazada.vn/t/c.06wSoi?intent=false&fallback=true&url=${encodeURIComponent(url)}&sub_aff_id=shorTool`
+    const linkLaz = await `https://c.lazada.vn/t/c.06wSoi?intent=true&fallback=true&url=${encodeURIComponent(url)}&sub_aff_id=shorTool`
    await fetch(`https://s.slamee.top/yourls-api.php?signature=0b172c9ad7&format=simple&action=shorturl&url=${encodeURIComponent(linkLaz)}`).then(res => res.text()).then(async(data)  => {console.log(data); await ctx.reply(data, {parse_mode: "HTML"})})
 break;
   }
