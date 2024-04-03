@@ -16,7 +16,7 @@ bot.on('message', async (ctx) => {
   const maxRetries = 3;
       while (retryCount < maxRetries) {
       try { 
-        break;
+        
   if (linkRegex.test(message)) {
     const url = message.match(linkRegex)[0]
     console.log(url)
