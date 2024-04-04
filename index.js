@@ -61,7 +61,7 @@ break;
 } 
 } catch {
   console.log(err)
-      retryCount++;
+    //  retryCount++;
 }}
 })
 
