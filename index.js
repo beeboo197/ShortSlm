@@ -13,7 +13,7 @@ bot.on('message', async (ctx) => {
   const pee = /https:\/\/sh/;
   const aff = /c.lazada/gm
   let retryCount = 0;
-  const maxRetries = 3;
+  const maxRetries = 1;
       while (retryCount < maxRetries) {
       try { 
         
