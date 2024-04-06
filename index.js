@@ -54,6 +54,7 @@ bot.on('message', async (ctx) => {
 }).then(res => res.json()).then(async(data)  => {console.log(data.message); await ctx.reply(data.message, {parse_mode: "HTML"})})
 }  else {
   const shopLink = await longUrl.split("?")[0]+'?path=index.htm'
+        console.log(shopLink)
  await fetch("https://adsense.lazada.vn/newOffer/link-convert.json", {
   "headers": {
     "accept": "application/json, text/plain, */*",
