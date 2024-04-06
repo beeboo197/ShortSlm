@@ -31,7 +31,7 @@ bot.on('message', async (ctx) => {
       .replace(/URL\('/g, '')
       .replace(/%3Fdsource/,''))
       if (aff.test(longUrl)) {  
-        const productLink = await `longUrl.match(/share&url=(.*?)\html/)[1] + 'html'`
+        const productLink = await longUrl.match(/share&url=(.*?)\html/)[1] + 'html'
         console.log(productLink)
  await fetch("https://adsense.lazada.vn/newOffer/link-convert.json", {
   "headers": {
