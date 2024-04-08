@@ -143,8 +143,8 @@ bot.on('message', async (ctx) => {
     return text;
   };
   //
-  shortenLinks(message).then((shortenedText) => {
-    ctx.reply(shortenedText);
+  await shortenLinks(message).then(async (shortenedText) => {
+    await ctx.reply(shortenedText);
   });
 
 })
