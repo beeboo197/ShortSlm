@@ -15,6 +15,9 @@ bot.on('message', async (ctx) => {
   const pee = /https:\/\/sh/;
   const shortenLink = async function (originalLink) {
     if (originalLink.includes(lzd)) {
+      for (var i = 1; i<=1; i++) {
+    break;
+      }
        const resp =  await fetch(originalLink)
        console.log(resp)
        const data = await resp.text()
