@@ -6,6 +6,7 @@ const bot = new Bot(process.env.BOT_TOKEN);
 
 
 bot.on('message', async (ctx) => {
+  const affId = "143445b820ec1f1e31be5859ab35ab53"
   const message = ctx.message.text;
   const linkRegex = /(https?:\/\/[^\s]+)/gm;
   const lzd = 'https://s.lazada'
@@ -36,7 +37,7 @@ bot.on('message', async (ctx) => {
               "sec-fetch-dest": "empty",
               "sec-fetch-mode": "cors",
               "sec-fetch-site": "same-origin",
-              "cookie": "lzd_sid=192ff58bf32e28932ff11442530d8cd2;",
+              "cookie": `lzd_sid=${affId}`,
               "Referer": "https://adsense.lazada.vn/index.htm",
               "Referrer-Policy": "strict-origin-when-cross-origin"
             },
@@ -61,7 +62,7 @@ bot.on('message', async (ctx) => {
               "sec-fetch-dest": "empty",
               "sec-fetch-mode": "cors",
               "sec-fetch-site": "same-origin",
-              "cookie": "lzd_sid=192ff58bf32e28932ff11442530d8cd2;",
+              "cookie": `lzd_sid=${affId}`,
               "Referer": "https://adsense.lazada.vn/index.htm",
               "Referrer-Policy": "strict-origin-when-cross-origin"
             },
@@ -87,7 +88,7 @@ bot.on('message', async (ctx) => {
               "sec-fetch-dest": "empty",
               "sec-fetch-mode": "cors",
               "sec-fetch-site": "same-origin",
-              "cookie": "lzd_sid=192ff58bf32e28932ff11442530d8cd2;",
+              "cookie": `lzd_sid=${affId}`,
               "Referer": "https://adsense.lazada.vn/index.htm",
               "Referrer-Policy": "strict-origin-when-cross-origin"
             },
@@ -110,7 +111,7 @@ bot.on('message', async (ctx) => {
               "sec-fetch-dest": "empty",
               "sec-fetch-mode": "cors",
               "sec-fetch-site": "same-origin",
-              "cookie": "lzd_sid=192ff58bf32e28932ff11442530d8cd2;",
+              "cookie": `lzd_sid=${affId}`,
               "Referer": "https://adsense.lazada.vn/index.htm",
               "Referrer-Policy": "strict-origin-when-cross-origin"
             },
