@@ -36,7 +36,7 @@ bot.on('message', async (ctx) => {
               "sec-fetch-dest": "empty",
               "sec-fetch-mode": "cors",
               "sec-fetch-site": "same-origin",
-              "cookie": "lzd_sid=14101d5824364ffdc9730226a7200e87;",
+              "cookie": "lzd_sid=192ff58bf32e28932ff11442530d8cd2;",
               "Referer": "https://adsense.lazada.vn/index.htm",
               "Referrer-Policy": "strict-origin-when-cross-origin"
             },
@@ -61,7 +61,7 @@ bot.on('message', async (ctx) => {
               "sec-fetch-dest": "empty",
               "sec-fetch-mode": "cors",
               "sec-fetch-site": "same-origin",
-              "cookie": "lzd_sid=14101d5824364ffdc9730226a7200e87;",
+              "cookie": "lzd_sid=192ff58bf32e28932ff11442530d8cd2;",
               "Referer": "https://adsense.lazada.vn/index.htm",
               "Referrer-Policy": "strict-origin-when-cross-origin"
             },
@@ -87,7 +87,7 @@ bot.on('message', async (ctx) => {
               "sec-fetch-dest": "empty",
               "sec-fetch-mode": "cors",
               "sec-fetch-site": "same-origin",
-              "cookie": "lzd_sid=14101d5824364ffdc9730226a7200e87;",
+              "cookie": "lzd_sid=192ff58bf32e28932ff11442530d8cd2;",
               "Referer": "https://adsense.lazada.vn/index.htm",
               "Referrer-Policy": "strict-origin-when-cross-origin"
             },
@@ -110,7 +110,7 @@ bot.on('message', async (ctx) => {
               "sec-fetch-dest": "empty",
               "sec-fetch-mode": "cors",
               "sec-fetch-site": "same-origin",
-              "cookie": "lzd_sid=14101d5824364ffdc9730226a7200e87;",
+              "cookie": "lzd_sid=192ff58bf32e28932ff11442530d8cd2;",
               "Referer": "https://adsense.lazada.vn/index.htm",
               "Referrer-Policy": "strict-origin-when-cross-origin"
             },
