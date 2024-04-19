@@ -126,7 +126,7 @@ bot.on('message', async (ctx) => {
   //////
  
   const shortenLinks = async (text) => {
-    //return 0
+    return 0
     const urls = text.match(linkRegex)
     if (urls) {
       for (const url of urls) {
