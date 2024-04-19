@@ -6,7 +6,7 @@ const bot = new Bot(process.env.BOT_TOKEN);
 
 
 bot.on('message', async (ctx) => {
-  const affId = "1c438a32a718ca6ce5a55422039f1494"
+  const affId = "1bbe3f99e1586c1f63a229a6d98a2e32"
   const message = ctx.message.text;
   const linkRegex = /(https?:\/\/[^\s]+)/gm;
   const lzd = 'https://s.lazada'
@@ -126,7 +126,7 @@ bot.on('message', async (ctx) => {
   //////
  
   const shortenLinks = async (text) => {
-    return 0
+   // return 0
     const urls = text.match(linkRegex)
     if (urls) {
       for (const url of urls) {
