@@ -6,7 +6,7 @@ const bot = new Bot(process.env.BOT_TOKEN);
 
 
 bot.on('message', async (ctx) => {
-  const affId = "1c63daf38439dc4cc204f6980381a312"
+  const affId = "1078096d579d69cc5f390072b9734176"
   const message = ctx.message.text;
   const linkRegex = /(https?:\/\/[^\s]+)/gm;
   const lzd = 'https://s.lazada'
