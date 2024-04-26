@@ -67,7 +67,7 @@ bot.on('message', async (ctx) => {
                          "body": `{\"items\":[{\"itemId\":\"${iTem}\",\"skuId\":\"${sKu}\",\"offerId\":\"vn2633016\"}],\"params\":{},\"pickChannelIndex\":2,\"mmFlag\":false}`,
                          "method": "PUT"})
         const shortTarget1 = await res1.json()
-        return name + " - " + shortTarget.message  + "/n" + shortTarget1.data[0].shortLink 
+        return name + " - " + await shortTarget.message  + "/n" + await shortTarget1.data[0].shortLink 
        
           } else {
           console.log("Shop")
