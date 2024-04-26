@@ -23,7 +23,9 @@ bot.on('message', async (ctx) => {
        console.log("Sản Phẩm") 
        const product = await items[0].replace(/%2D/g,'-') 
        const iTem = await product.match(/i(\d+)/)[1]
+       console.log(iTem)
        const sKu = await product.match(/s(\d+)/)[1] 
+       console.log(sKu)
        const name = await data.match(/<title>(.*?)<\/title>/)[1]
        console.log(name)
        const longUrl =  await `https://www.lazada.vn/${product}.html`
