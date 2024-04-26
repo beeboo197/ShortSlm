@@ -18,7 +18,9 @@ bot.on('message', async (ctx) => {
        const resp =  await fetch(originalLink)
        console.log(resp)
        const data = await resp.text()
-       const items =  await data.match(/i(\d+)-s(\d+)/) || data.match(/i(\d+)%2Ds(\d+)/) 
+       const items =  await data.match(/i(\d+)-s(\d+)/) || data.match(/i(\d+)%2Ds(\d+)/)
+       const iTem = await items.match(/i(\d+)/)[1]
+       const sKu = await items.match(/s(\d+)/)[1]
       if (items) {
        console.log("Sản Phẩm") 
        const product = await items[0].replace(/%2D/g,'-') 
@@ -44,7 +46,28 @@ bot.on('message', async (ctx) => {
             "body": `{\"jumpUrl\":\"${longUrl}\",\"subIdTemplateKey\":\"subId_VN_205141355_1712232282669_40\"}`,
             "method": "POST"})
         const shortTarget = await res.json()
-        return name + " - " + shortTarget.message   
+        const res1 = await fetch("https://adsense.lazada.vn/newOffer/getLink.json", {
+                           "headers": {
+                           "accept": "application/json, text/plain, */*",
+                           "accept-language": "en-US,en;q=0.9,vi;q=0.8,zh-CN;q=0.7,zh;q=0.6",
+                           "bx-v": "2.5.11",
+                           "content-type": "application/json",
+                           "platform": "desktop",
+                           "priority": "u=1, i",
+                           "sec-ch-ua": "\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"",
+                           "sec-ch-ua-mobile": "?0",
+                           "sec-ch-ua-platform": "\"Windows\"",
+                           "sec-fetch-dest": "empty",
+                           "sec-fetch-mode": "cors",
+                           "sec-fetch-site": "same-origin",
+                           "cookie": `lzd_sid=${affId}`,
+                           "Referer": "https://adsense.lazada.vn/index.htm",
+                           "Referrer-Policy": "strict-origin-when-cross-origin"
+                          },
+                         "body": `{\"items\":[{\"itemId\":\"${iTem}\",\"skuId\":\"${sKu}\",\"offerId\":\"vn2633016\"}],\"params\":{},\"pickChannelIndex\":2,\"mmFlag\":false}`,
+                         "method": "PUT"})
+        const shortTarget1 = await res1.json()
+        return name + " - " + shortTarget.message  + "/n" + shortTarget1.data[0].shortLink 
        
           } else {
           console.log("Shop")
